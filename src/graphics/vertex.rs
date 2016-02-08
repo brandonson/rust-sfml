@@ -41,6 +41,7 @@ use csfml_graphics_sys as ffi;
 /// It has a position and other extra attributes that will be used for drawing:
 /// in SFML, vertices also have a color and a pair of texture coordinates.
 #[repr(C)]
+#[derive(Clone, PartialEq, PartialOrd, Debug, Copy)]
 pub struct Vertex(pub ffi::sfVertex);
 
 impl Vertex {
